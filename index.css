@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  font-family: system-ui, sans-serif;
+}
+#page-wrap {
+  width: 490px;
+  margin: 80px auto;
+}
+h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0 0 30px;
+}
+pre {
+  background: #000;
+  text-align: left;
+  padding: 20px;
+  margin: 0 auto 30px;
+}
+
+/* bars */
+.meter {
+  box-sizing: content-box;
+  height: 30px;
+  position: relative;
+  margin: 10px 0 20px 0;
+  background: #ebebeb;
+  border-radius: 25px;
+  color: black;
+}
+.my-bar {
+  width: 50%;
+  color: black;
+  display: flex !important;
+  align-items: center;
+  justify-content: right;
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: inset 0 2px 9px rgb(255 255 255 / 30%),
+    inset 0 -2px 6px rgb(0 0 0 / 40%);
+  position: relative;
+  overflow: hidden;
+  padding-right: 10px;
+}
+.meter > .green {
+  background-color: #b6e078;
+}
+.meter > .red {
+  background-color: #fe9789;
+}
+.meter > .white {
+  background-color: whitesmoke;
+}
+.meter > .blue {
+  background-color: #82c5f0;
+}
+.meter > .yellow {
+  background-color: #fed466;
+}
+
+.meter > span:after,
+.animate > span > span {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* finish button  */
+.finish-button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-weight: 400 !important;
+  background-color: rgb(48, 145, 19);
+  color: #fff;
+  padding: 23px 50px;
+  margin: auto;
+  text-align: center;
+  display: inline-block !important;
+  text-decoration: none;
+  border: 0px;
+  width: max-content;
+  cursor: pointer;
+  transition: all 0.3s 0s ease-in-out;
+  border-radius: 36px;
+}
+.finish-button:hover {
+  transform: scale(1.04, 1);
+  background-color: rgb(48, 145, 19);
+  text-decoration: none;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="page-wrap">
+      <h1>ShortPoint</h1>
+      <p>
+        We believe teamwork makes the dream work, so we built ShortPoint to keep
+        teams in sync and winning at scale. ShortPoint is an easy to use design
+        software that installs as an extension within your existing intranet
+        environment and works seamlessly with Office 365, SharePoint, SAP Cloud
+        Portal and Microsoft Teams.
+      </p>
+
+      <div class="meter">
+        <span class="my-bar green"> 50% </span>
+      </div>
+      <div class="meter">
+        <span class="my-bar red"> 50% </span>
+      </div>
+      <div class="meter">
+        <span class="my-bar white"> 50% </span>
+      </div>
+      <div class="meter">
+        <span class="my-bar blue"> 50% </span>
+      </div>
+      <div class="meter">
+        <span class="my-bar yellow"> 50% </span>
+      </div>
+    </div>
+    <button class="finish-button" onclick="move()">Finish</button>
+
+    <script>
+      var i = 0;
+      function move() {
+        if (i == 0) {
+          i = 1;
+          var elems = document.getElementsByClassName("my-bar");
+          var width = 50;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (width >= 100) {
+              clearInterval(id);
+              i = 0;
+            } else {
+              width++;
+              for (let elem of elems) {
+                elem.style.width = width + "%";
+                elem.innerHTML = width + "%";
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
