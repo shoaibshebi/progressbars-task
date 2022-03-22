@@ -50,19 +50,19 @@ pre {
   padding-right: 10px;
 }
 .meter > .green {
-  background-color: #b6e078;
+  background-color: #8ec847;
 }
 .meter > .red {
-  background-color: #fe9789;
+  background-color: #fe7365;
 }
 .meter > .white {
   background-color: whitesmoke;
 }
 .meter > .blue {
-  background-color: #82c5f0;
+  background-color: #69b2df;
 }
 .meter > .yellow {
-  background-color: #fed466;
+  background-color: #f0c050;
 }
 
 .meter > span:after,
@@ -73,7 +73,6 @@ pre {
   left: 0;
   bottom: 0;
   right: 0;
-
   background-image: linear-gradient(
     -45deg,
     rgba(255, 255, 255, 0.2) 25%,
@@ -88,6 +87,7 @@ pre {
   background-size: 50px 50px;
   border-radius: 20px;
   overflow: hidden;
+  background-size: 0.7rem 0.7rem;
 }
 
 /* finish button  */
